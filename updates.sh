@@ -45,6 +45,18 @@ cherries+=(CM_103556)
 # libstagefright: Update LPAPlayer callbacks
 cherries+=(CM_109096)
 
+# ART: Increase timeout to allow slow CPUs to finish compilation
+cherries+=(CM_127622)
+
+# frameworks/base: Ambient display now comes up immediately when a notification comes in
+cherries+=(CM_127623)
+
+# Installd: Add a swap override flag
+cherries+=(CM_127626)
+
+# stagefright-plugins: Revert "codecs: Disable AC3/EAC3"
+cherries+=(CM_127624)
+
 if [ -z $cherries ]; then
     echo -e "Nothing to cherry-pick!"
 else
