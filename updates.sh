@@ -21,6 +21,12 @@ cherries+=(CM_117733)
 # arm: Allow disabling PIE for dynamically linked executables
 cherries+=(CM_123032)
 
+# Allow doze on devices without significant motion sensor
+cherries+=(CM_135200)
+
+# stagefright-plugins: Revert "codecs: Disable AC3/EAC3"
+cherries+=(CM_127624)
+
 if [ -z $cherries ]; then
     echo -e "Nothing to cherry-pick!"
 else

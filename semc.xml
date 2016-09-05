@@ -4,10 +4,10 @@
           fetch="https://github.com"
           review="review.msm7x30.org" />
 
-  <project name="LegacyXperia/local_manifests" path="vendor/extra" remote="msm7x30" />
+  <project name="niks255/local_manifests" path="vendor/extra" remote="msm7x30" />
 
   <!-- LegacyXperia projects -->
-  <project name="LegacyXperia/android_device_semc_msm7x30-common" path="device/semc/msm7x30-common" remote="msm7x30" />
+  <project name="niks255/android_device_semc_msm7x30-common" path="device/semc/msm7x30-common" remote="msm7x30" />
 
   <project name="LegacyXperia/android_device_semc_mogami-common" path="device/semc/mogami-common" remote="msm7x30" />
   <project name="LegacyXperia/android_device_semc_anzu" path="device/semc/anzu" remote="msm7x30" />
@@ -44,4 +44,15 @@
   <!-- AOSP projects-->
   <project name="platform/prebuilts/gcc/darwin-x86/arm/arm-eabi-4.7" path="prebuilts/gcc/darwin-x86/arm/arm-eabi-4.7" groups="pdk,darwin,arm" remote="aosp" revision="master" />
   <project name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" groups="pdk,linux,arm" remote="aosp" revision="master" />
+  
+  <!-- Google Apps -->
+  <project name="opengapps/aosp_build" path="vendor/google/build" clone-depth="1" revision="master" />
+  <project name="opengapps/all" path="vendor/opengapps/sources/all" clone-depth="1" revision="master" />
+  <project name="opengapps/arm" path="vendor/opengapps/sources/arm" clone-depth="1" revision="master" />
+  
+  <remove-project name="CyanogenMod/android_packages_apps_CMUpdater" />
+  <remove-project name="platform/external/svox" />
+  <remove-project name="CyanogenMod/android_packages_apps_Terminal" />
+  <remove-project name="CyanogenMod/android_packages_apps_Gello" />
+  <remove-project name="CyanogenMod/android_external_gello_build" />
 </manifest>
