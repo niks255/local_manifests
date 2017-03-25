@@ -3,11 +3,15 @@
   <remote name="msm7x30"
           fetch="https://github.com"
           review="review.msm7x30.org" />
+          
+  <remote name="omnirom"
+          fetch="https://github.com/omnirom"
+          review="gerrit.omnirom.org" />
 
-  <project name="LegacyXperia/local_manifests" path="vendor/extra" remote="msm7x30" />
+  <project name="niks255/local_manifests" path="vendor/extra" remote="msm7x30" />
 
   <!-- LegacyXperia projects -->
-  <project name="LegacyXperia/android_device_semc_msm7x30-common" path="device/semc/msm7x30-common" remote="msm7x30" />
+  <project name="niks255/android_device_semc_msm7x30-common" path="device/semc/msm7x30-common" remote="msm7x30" />
 
   <project name="LegacyXperia/android_device_semc_mogami-common" path="device/semc/mogami-common" remote="msm7x30" />
   <project name="LegacyXperia/android_device_semc_anzu" path="device/semc/anzu" remote="msm7x30" />
@@ -38,10 +42,18 @@
   <!-- LineageOS projects -->
   <project name="LineageOS/android_external_sony_boringssl-compat" path="external/sony/boringssl-compat" />
   <project name="LineageOS/android_external_stlport" path="external/stlport" />
-
+  <project name="LineageOS/android_packages_apps_SoundRecorder" path="packages/apps/SoundRecorder" groups="pdk-fs" />
   <project name="LineageOS/android_hardware_sony_DASH" path="hardware/sony/DASH" />
 
   <!-- AOSP projects-->
   <project name="platform/prebuilts/gcc/darwin-x86/arm/arm-eabi-4.7" path="prebuilts/gcc/darwin-x86/arm/arm-eabi-4.7" groups="pdk,darwin,arm" remote="aosp" revision="master" />
   <project name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" groups="pdk,linux,arm" remote="aosp" revision="master" />
+
+  <!-- TWRP -->
+  <project name="android_bootable_recovery" path="bootable/recovery-twrp" remote="omnirom" revision="android-7.1"/>
+  
+  <!-- Remove CM/LAOS projects -->
+  <remove-project name="LineageOS/android_packages_apps_CMUpdater" />
+  <remove-project name="LineageOS/android_packages_apps_Terminal" />
+  <remove-project name="platform/external/svox" />
 </manifest>
