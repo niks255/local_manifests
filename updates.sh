@@ -7,11 +7,6 @@ fi
 
 android="${PWD}"
 
-# Add local cherries if they exist
-if [ -f ${android}/updates-local.sh ]; then
-    source ${android}/updates-local.sh
-fi
-
 # libstagefright: Allow using camera recording buffer as input for encoder
 cherries+=(LAOS_62450)
 
@@ -59,6 +54,15 @@ cherries+=(LAOS_130381)
 
 # cutils: Squashed backport of BFQIO cgroups support
 cherries+=(LAOS_143080)
+
+# Revert "ota: Make sure we don't install on top of an incompatible system"
+cherries+=(LAOS_163005)
+
+# Remove terminal emulator from build
+cherries+=(LAOS_145015)
+
+# DO NOT MERGE Add signature spoofing
+cherries+=(LAOS_166418)
 
 if [ -z $cherries ]; then
     echo -e "Nothing to cherry-pick!"
